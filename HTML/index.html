@@ -10,10 +10,35 @@
     <p id="demo"></p>
     
     <script>
+        var txt = "";
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onload = function() {
-        const myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = myObj.name;
+        const animals = JSON.parse(this.responseText);
+        let txt = "";
+
+        for(i = 0; i < animals.length;i++){
+                        txt +=`                        
+                                    <h3>${animals[i].name}</h3>
+                                    <h3>${animals[i].scientific_name}</h3>
+                                    <h3>${animals[i].diet} <h3>
+                                    <h3>${animals[i].average_lifespan}</h3>
+                                    <h3 class="text">Habitats:</h3>
+                                    <h3 class="text">
+                                            <ul>`;
+                                            for (j = 0; j <animals[i].habitats.length; j++){
+                                                txt += `<li>${animals[i].habitats[j]}</li>`;
+                                            }
+                                        txt +=`    
+                                        </ul>
+                                        <hr>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+        document.getElementById("demo").innerHTML = txt;
         }
         xmlhttp.open("GET", "http://json-act.test/animals.php");
         xmlhttp.send();

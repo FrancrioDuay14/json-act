@@ -3,6 +3,7 @@
 
     $animals = array(
         array(
+            'img'               => "rawr.jpg",
             'name'              => "Lion",
             'scientific_name'   => "Panthera leo",
             'diet'              => "Carinvore",
@@ -18,6 +19,7 @@
 
         ),
         array(
+            'img'               => "leo.jpg",
             'name'              => "Leopard",
             'scientific_name'   => "Panthera pardus",
             'diet'              => "Carinvore",
@@ -32,6 +34,7 @@
         
         ),
         array(
+            'img'               => "sheep.jpg",
             'name'              => "Sheep",
             'scientific_name'   => "Ovis aries",
             'diet'              => "Herbivore",
@@ -46,6 +49,7 @@
         
         ),
         array(
+            'img'               => "deer.jpg",
             'name'              => "Deer",
             'scientific_name'   => "Cervidae",
             'diet'              => "Herbivore",
@@ -60,6 +64,7 @@
         
         ),
         array(
+            'img'               => "tiger.jpg",
             'name'              => "Tiger",
             'scientific_name'   => "Panthera tigris",
             'diet'              => "Carinvore",
